@@ -1,0 +1,34 @@
+ssh root@62.72.12.218
+Tes5r3tg#GHVS
+
+path = 
+
+cd /var/www/backend/Proxerp_landing
+
+
+sudo systemctl restart apache2
+
+
+DB_DATABASE=proxerp_landing
+DB_USERNAME=te_user
+DB_PASSWORD=TechEdu@456!
+
+
+error  fixing
+
+php artisan down
+
+php artisan route:clear
+php artisan config:clear
+php artisan view:clear
+php artisan cache:clear
+php artisan event:clear
+php artisan optimize:clear
+
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+php artisan event:cache
+php artisan optimize
+
+php artisan up
